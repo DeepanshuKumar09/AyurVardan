@@ -1,0 +1,9 @@
+{
+  "name": "Ayur Vardan",
+  "description": "A holistic wellness app providing tailored interfaces for doctors and patients to manage Ayurvedic consultations and track health data.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone",
+    "geolocation"
+  ]
+}

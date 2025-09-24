@@ -1,0 +1,86 @@
+import type { Product } from '../types';
+
+export const filters = ['All', 'Hair', 'Skin', 'Digestion', 'Bones', "Women's Wellness", 'Oils', 'Food'];
+
+export const products: Product[] = [
+    {
+        id: 1,
+        name: 'Organic Ashwagandha Powder',
+        category: 'Herbal Powders',
+        price: 949,
+        imageUrl: 'https://picsum.photos/seed/ashwagandha/300/300',
+        tags: ['Stress', 'Bones'],
+    },
+    {
+        id: 2,
+        name: 'Triphala Digestive Tonic',
+        category: 'Herbal Tonics',
+        price: 1099,
+        imageUrl: 'https://picsum.photos/seed/triphala/300/300',
+        tags: ['Digestion'],
+    },
+    {
+        id: 3,
+        name: 'Bhringraj Hair Oil',
+        category: 'Essential Oils',
+        price: 799,
+        imageUrl: 'https://picsum.photos/seed/hairoil/300/300',
+        tags: ['Hair', 'Oils'],
+    },
+    {
+        id: 4,
+        name: 'Neem & Turmeric Face Wash',
+        category: 'Skincare',
+        price: 599,
+        imageUrl: 'https://picsum.photos/seed/facewash/300/300',
+        tags: ['Skin'],
+    },
+    {
+        id: 5,
+        name: "Shatavari Women's Tonic",
+        category: 'Herbal Tonics',
+        price: 1249,
+        imageUrl: 'https://picsum.photos/seed/shatavari/300/300',
+        tags: ["Women's Wellness"],
+    },
+    {
+        id: 6,
+        name: 'Cold-Pressed Sesame Oil',
+        category: 'Essential Oils',
+        price: 715,
+        imageUrl: 'https://picsum.photos/seed/sesameoil/300/300',
+        tags: ['Bones', 'Skin', 'Oils'],
+    },
+    {
+        id: 7,
+        name: 'Organic Ghee',
+        category: 'Food',
+        price: 999,
+        imageUrl: 'https://picsum.photos/seed/ghee/300/300',
+        tags: ['Food', 'Digestion'],
+    },
+    {
+        id: 8,
+        name: 'Chyawanprash Herbal Jam',
+        category: 'Food',
+        price: 1399,
+        imageUrl: 'https://picsum.photos/seed/chyawanprash/300/300',
+        tags: ['Food', 'Immunity'],
+    },
+      {
+        id: 9,
+        name: 'Kumkumadi Skin Serum',
+        category: 'Skincare',
+        price: 1799,
+        imageUrl: 'https://picsum.photos/seed/serum/300/300',
+        tags: ['Skin', 'Oils'],
+    },
+    {
+        id: 10,
+        name: 'Herbal Hair Growth Pack',
+        category: 'Haircare',
+        price: 1049,
+        imageUrl: 'https://picsum.photos/seed/hairpack/300/300',
+        tags: ['Hair'],
+    },
+];

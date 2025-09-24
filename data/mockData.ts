@@ -1,0 +1,283 @@
+import type { Doctor, Patient, Review } from '../types';
+
+const sampleReviews: Review[] = [
+    { patientName: 'Riya Patel', rating: 5, text: 'Dr. Sharma is incredibly knowledgeable and compassionate. My Panchakarma treatment was a great experience.' },
+    { patientName: 'Amit Kumar', rating: 4, text: 'Very thorough consultation. Helped me understand my health issues from an Ayurvedic perspective.' },
+    { patientName: 'Sunita Devi', rating: 5, text: 'Excellent doctor who listens patiently. I highly recommend her for holistic wellness.' },
+];
+
+export const doctors: Doctor[] = [
+  {
+    id: 1,
+    name: 'Dr. Anjali Sharma',
+    email: 'doctor.sharma@ayurvardan.com',
+    password: 'pass123',
+    specialty: 'Panchakarma Specialist',
+    photoUrl: 'https://picsum.photos/seed/doc1/200/200',
+    degree: 'B.A.M.S., M.D. (Ayu)',
+    rating: 4.8,
+    isOnline: true,
+    location: {
+      address: 'Upper Lake, Bhopal',
+      lat: 23.2599,
+      lng: 77.3697,
+    },
+    reviews: sampleReviews,
+    availableSlots: ['10:00 AM', '11:00 AM', '03:00 PM', '04:00 PM'],
+  },
+  {
+    id: 2,
+    name: 'Dr. Vikram Singh',
+    email: 'doctor.singh@ayurvardan.com',
+    password: 'pass123',
+    specialty: 'Kayachikitsa (Internal Medicine)',
+    photoUrl: 'https://picsum.photos/seed/doc2/200/200',
+    degree: 'B.A.M.S.',
+    rating: 4.5,
+    isOnline: false,
+    location: {
+      address: 'Arera Colony, Bhopal',
+      lat: 23.2181,
+      lng: 77.4309,
+    },
+    reviews: [
+        { patientName: 'Prakash Verma', rating: 5, text: 'Dr. Singh correctly diagnosed my chronic digestive issues. His treatment plan has worked wonders.' },
+        { patientName: 'Neha Gupta', rating: 4, text: 'Good experience, but the waiting time was a bit long. The doctor is very experienced.' },
+    ],
+    availableSlots: ['09:00 AM', '09:30 AM', '02:00 PM'],
+  },
+  {
+    id: 3,
+    name: 'Dr. Priya Desai',
+    email: 'doctor.desai@ayurvardan.com',
+    password: 'pass123',
+    specialty: 'Prasuti Tantra (Ob-Gyn)',
+    photoUrl: 'https://picsum.photos/seed/doc3/200/200',
+    degree: 'B.A.M.S., M.S. (Ayu)',
+    rating: 4.9,
+    isOnline: true,
+    location: {
+      address: 'MP Nagar, Bhopal',
+      lat: 23.2355,
+      lng: 77.4345,
+    },
+    reviews: [
+        { patientName: 'Aisha Khan', rating: 5, text: 'Dr. Desai is a wonderful and caring doctor. She guided me throughout my pregnancy with Ayurvedic care.' },
+        { patientName: 'Geeta Menon', rating: 5, text: 'The best Ayurvedic gynecologist in the city. Very supportive and understanding.' },
+    ],
+    availableSlots: ['10:30 AM', '11:30 AM', '04:30 PM'],
+  },
+  {
+    id: 4,
+    name: 'Dr. Rohan Mehta',
+    email: 'doctor.mehta@ayurvardan.com',
+    password: 'pass123',
+    specialty: 'Shalya Tantra (Surgery)',
+    photoUrl: 'https://picsum.photos/seed/doc4/200/200',
+    degree: 'B.A.M.S.',
+    rating: 4.6,
+    isOnline: true,
+    location: {
+      address: 'Bairagarh, Bhopal',
+      lat: 23.2727,
+      lng: 77.3218,
+    },
+    reviews: [
+        { patientName: 'Sanjay Reddy', rating: 5, text: 'Handled my case with extreme professionalism. The procedure was smooth and recovery was quick.' },
+    ],
+    availableSlots: ['09:00 AM', '11:00 AM', '01:00 PM', '03:00 PM'],
+  },
+  {
+    id: 5,
+    name: 'Dr. Sneha Patel',
+    email: 'doctor.patel@ayurvardan.com',
+    password: 'pass123',
+    specialty: 'Online Wellness Coach',
+    photoUrl: 'https://picsum.photos/seed/doc5/200/200',
+    degree: 'Ayurvedic Nutritionist',
+    rating: 4.7,
+    isOnline: true,
+    location: {
+      address: 'Online Only',
+      lat: 0,
+      lng: 0,
+    },
+    reviews: [
+        { patientName: 'Kavita Singh', rating: 5, text: 'Her diet plans are very effective and easy to follow. I feel much more energetic now.' },
+    ],
+    availableSlots: ['09:00 AM', '10:00 AM', '11:00 AM', '02:00 PM', '03:00 PM', '04:00 PM'],
+  },
+  {
+    id: 6,
+    name: 'Dr. Meera Iyer',
+    email: 'doctor.iyer@ayurvardan.com',
+    password: 'pass123',
+    specialty: 'Ayurvedic Dermatology',
+    photoUrl: 'https://picsum.photos/seed/doc6/200/200',
+    degree: 'B.A.M.S.',
+    rating: 4.7,
+    isOnline: false,
+    location: {
+      address: 'Kolar Road, Bhopal',
+      lat: 23.1950,
+      lng: 77.3934,
+    },
+    reviews: [
+        { patientName: 'Ananya Rao', rating: 5, text: 'Cured my chronic skin condition that allopathy couldn\'t. Forever grateful to Dr. Iyer.' },
+    ],
+    availableSlots: ['02:30 PM', '03:30 PM', '04:30 PM'],
+  },
+  {
+    id: 7,
+    name: 'Dr. Sameer Khan',
+    email: 'doctor.khan@ayurvardan.com',
+    password: 'pass123',
+    specialty: 'Kaumarabhritya (Pediatrics)',
+    photoUrl: 'https://picsum.photos/seed/doc7/200/200',
+    degree: 'B.A.M.S, M.D.',
+    rating: 4.6,
+    isOnline: true,
+    location: {
+      address: 'Indrapuri, Bhopal',
+      lat: 23.2256,
+      lng: 77.4589,
+    },
+    reviews: [
+        { patientName: 'Farida Begum', rating: 5, text: 'Excellent with children. My son is much healthier now, thanks to his advice on immunity.' },
+    ],
+    availableSlots: ['09:15 AM', '10:15 AM', '11:15 AM'],
+  }
+];
+
+export const allPatients: Patient[] = [
+  {
+    id: 1,
+    name: 'Arjun Sharma',
+    age: 45,
+    gender: 'Male',
+    photoUrl: 'https://picsum.photos/seed/pat1/200/200',
+    email: 'patient.arjun@ayurvardan.com',
+    password: 'pass123',
+    assignedDoctorId: 1,
+    consultationType: 'Online',
+    relationship: 'Self',
+    consultations: [
+      {
+        id: 101,
+        date: '2024-07-15',
+        symptoms: ['Chest pain', 'Shortness of breath'],
+        notes: 'Patient advised to monitor blood pressure and schedule a follow-up stress test. Prescribed beta-blockers.',
+      },
+      {
+        id: 102,
+        date: '2024-06-20',
+        symptoms: ['Dizziness'],
+        notes: 'Initial consultation. EKG performed, results normal. Recommended lifestyle changes.',
+      },
+    ],
+     progress: {
+      weightHistory: [
+        { date: '2024-07-01', weight: 85 },
+        { date: '2024-07-08', weight: 84.5 },
+        { date: '2024-07-15', weight: 84 },
+        { date: '2024-07-22', weight: 83 },
+      ],
+      symptomLog: [
+        { date: '2024-07-01', symptom: 'Bloating', severity: 4 },
+        { date: '2024-07-08', symptom: 'Bloating', severity: 3 },
+        { date: '2024-07-15', symptom: 'Bloating', severity: 2 },
+        { date: '2024-07-22', symptom: 'Bloating', severity: 1 },
+      ],
+      dietAdherence: [
+        { date: 'Week 1', adherence: 75 },
+        { date: 'Week 2', adherence: 80 },
+        { date: 'Week 3', adherence: 90 },
+      ],
+    },
+  },
+  {
+    id: 2,
+    name: 'Priya Singh',
+    age: 32,
+    gender: 'Female',
+    photoUrl: 'https://picsum.photos/seed/pat2/200/200',
+    email: 'patient.priya@ayurvardan.com',
+    password: 'pass123',
+    assignedDoctorId: 1,
+    consultationType: 'Online',
+    relationship: 'Spouse',
+    consultations: [
+      {
+        id: 201,
+        date: '2024-07-10',
+        symptoms: ['High cholesterol'],
+        notes: 'Follow-up on lipid panel results. Diet plan discussed and statin medication adjusted.',
+      },
+    ],
+    progress: {
+      weightHistory: [
+        { date: '2024-07-01', weight: 62 },
+        { date: '2024-07-08', weight: 62 },
+        { date: '2024-07-15', weight: 61.5 },
+        { date: '2024-07-22', weight: 61 },
+      ],
+      symptomLog: [
+        { date: '2024-07-01', symptom: 'Acidity', severity: 3 },
+        { date: '2024-07-08', symptom: 'Acidity', severity: 3 },
+        { date: '2024-07-15', symptom: 'Acidity', severity: 2 },
+        { date: '2024-07-22', symptom: 'Acidity', severity: 2 },
+      ],
+      dietAdherence: [
+        { date: 'Week 1', adherence: 60 },
+        { date: 'Week 2', adherence: 70 },
+        { date: 'Week 3', adherence: 75 },
+      ],
+    },
+  },
+  {
+    id: 3,
+    name: 'Rohan Patel',
+    age: 8,
+    gender: 'Male',
+    photoUrl: 'https://picsum.photos/seed/pat3/200/200',
+    email: 'patient.rohan@ayurvardan.com',
+    password: 'pass123',
+    assignedDoctorId: 2,
+    consultationType: 'Offline',
+    relationship: 'Child',
+    consultations: [
+      {
+        id: 301,
+        date: '2024-07-18',
+        symptoms: ['Fever', 'Sore throat'],
+        notes: 'Diagnosed with strep throat. Prescribed antibiotics.',
+      },
+    ],
+  },
+];
+
+export const familyProfiles: Patient[] = [
+    allPatients[0],
+    {
+        id: 4,
+        name: 'Sunita Sharma',
+        age: 42,
+        gender: 'Female',
+        photoUrl: 'https://picsum.photos/seed/pat4/200/200',
+        assignedDoctorId: 1,
+        consultationType: 'Online',
+        relationship: 'Spouse',
+        consultations: [],
+    },
+    {
+        id: 5,
+        name: 'Aarav Sharma',
+        age: 10,
+        gender: 'Male',
+        photoUrl: 'https://picsum.photos/seed/pat5/200/200',
+        assignedDoctorId: 7,
+        consultationType: 'Online',
+        relationship: 'Child',
+        consultations: [],
+    }
+];
